@@ -1,0 +1,29 @@
+.box{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 60px;
+    border: 1px solid gray;
+    position: relative;
+}
+/* .anime{
+    animation-name: move;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} */
+
+.anime{
+    animation: move 5s 2s alternate infinite;
+}
+@keyframes move {
+    0%{background-color: orange; left: 0px;top: 0px;}
+    25%{background-color: rgb(17, 121, 206); left: 200px;top: 0px;}
+    50%{background-color: rgb(227, 12, 156); left: 200px;top: 200px;}
+    75%{background-color: rgb(30, 255, 0); left: 0px;top: 200px;}
+    100%{background-color: rgb(255, 162, 0); left: 0px;top: 0px;}
+}
