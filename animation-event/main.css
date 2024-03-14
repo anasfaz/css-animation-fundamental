@@ -1,0 +1,25 @@
+.box {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  background-color: rgb(38, 0, 255);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 60px;
+  border: 1px solid gray;
+  position: relative;
+}
+
+.anime {
+    animation: move 6s linear 1s 6 alternate ;
+}
+@keyframes move {
+ from{
+    margin-left: 100%;
+    width: 300%;
+ }
+ to{
+    margin-left: 0%;
+    width: 100%;
+ }
+}
