@@ -1,43 +1,58 @@
-.box{
-    width: 200px;
-    height: 100px;
-    padding: 10px;
-    margin: 5px;
-    color: black;
-    background-color: orange;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 30px;
-    border: 1px solid gray;
-    position: relative;
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  margin: 5px;
+  color: black;
+  background-color: orange;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid gray;
+  position: absolute;
 }
-.anime{
-    animation: move 10s infinite;
-}
-.linear{
-    animation-timing-function: linear;
-}
-.ease{
-    animation-timing-function: ease;
+/* .anime {
+  animation: move 10s infinite;
+} */
+/* .linear {
+  animation-timing-function: linear;
+  background-color: black;
+  animation: move 3s;
+} */
+.ease {
+  animation-timing-function: ease;
+  background-color: rgb(184, 218, 14);
+  animation: slide 5s,move;
+  
 }
 
-.easeIn{
-    animation-timing-function: ease-in;
+.easeIn {
+  animation-timing-function: ease-in;
+  background-color: rgb(10, 17, 217);
+  animation: slide 5s 6s ;
 }
-.easeOut{
-    animation-timing-function: ease-out;
+.easeOut {
+  animation-timing-function: ease-out;
+  background-color: rgb(102, 10, 201);
 }
-.easeInOut{
-    animation-timing-function: ease-in-out;
+.easeInOut {
+  animation-timing-function: ease-in-out;
+  background-color: rgb(147, 1, 1);
 }
-.custom{
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+.custom {
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @keyframes move {
-    0%{background-color: orange;
-    left: 0px;
-    top: 0px;}
-    100%{background-color: green;
-        left: 200px;
-        top: 0px;}
+  0% {
+    background-color: orange;
+    z-index: 10;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes slide {
+    0%{margin-left: -200px; transition: cubic-bezier(0.075, 0.82, 0.165, 1);}
+    100%{margin-left: 0px;transition: cubic-bezier(1, 0.82, 0.165, 1)}
 }

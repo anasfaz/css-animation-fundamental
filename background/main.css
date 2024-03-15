@@ -1,0 +1,18 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1707343845208-a20c56d2c8ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    border-radius: 10px;
+}
+.anime{
+ animation: move 10s ease-in ;
+}
+
+@keyframes move {
+    from{
+        background-position: left;
+    }
+    to{
+        background-position: right;
+    }
+}
