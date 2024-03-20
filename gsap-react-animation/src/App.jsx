@@ -1,4 +1,5 @@
-import { useRef, useLayoutEffect } from "react";
+import { useRef,} from "react";
+// import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./App.css";
@@ -8,7 +9,7 @@ function App() {
   useGSAP(
     () => {
       gsap
-        .timeline()
+        .timeline({repeat: 2, repeatDelay: 1})
         .from("#intro-slide", {
           xPercent: "-100",
           duration: 1.3,
